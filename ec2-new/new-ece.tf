@@ -1,28 +1,24 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws" #taken from terraform registery
+      source = "hashicorp/aws"
       version = "5.92.0"
     }
   }
+
+  backend "local" {
+    path = "/var/lib/jenkins/ec2-creation/terraform.tfstate"
+  }
 }
 
-
 provider "aws" {
-  # Configuration options
-  region= "ap-south-1" #here we specify that we want to use the variable named region.
-
+  region = "ap-south-1"
 }
 
 resource "aws_instance" "terraformtest" {
-  ami="ami-0e35ddab05955cf57"
-  instance_type = "t3.nano"
+  ami             = "ami-0e35ddab05955cf57"
+  instance_type   = "t3.nano"
   tags = {
     Name = "ec2-a-terraformcheck"
   }
-  
 }
-#we can also modify the resource by chaning the values in this file.Terraform will first delete the resource and then
-//create a new one with this Configuration.
-#operations performed: terraform init,terraform plan(summary of changes),terraform apply
-#terraform destroy
