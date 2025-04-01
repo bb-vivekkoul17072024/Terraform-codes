@@ -10,7 +10,7 @@ terraform {
 
 provider "aws" {
   # Configuration options
-  region= ap-south-1 #here we specify that we want to use the variable named region.
+  region= "ap-south-1" #here we specify that we want to use the variable named region.
 
 }
 
