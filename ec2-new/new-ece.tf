@@ -15,7 +15,7 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_instance" "terraformtest" {
+resource "aws_instance" "terraformtest1" {
   ami             = "ami-0e35ddab05955cf57"
   instance_type   = "t3.nano"
   tags = {
