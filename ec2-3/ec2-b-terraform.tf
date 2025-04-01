@@ -5,6 +5,9 @@ terraform {
       version = "5.92.0"
     }
   }
+backend "local" {
+    path = "/var/lib/jenkins/ec2-creation/terraform.tfstate"
+  }
 }
 
 
