@@ -18,7 +18,7 @@ resource "aws_instance" "terraformtest" {
   ami="ami-0e35ddab05955cf57"
   instance_type = "t3.nano"
   tags = {
-    Name = "terrafor-ec2-diff-check"
+    Name = "ec2-a-terraformcheck"
   }
   
 }
