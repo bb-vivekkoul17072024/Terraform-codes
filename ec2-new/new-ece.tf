@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "local" {
-    path = "/var/lib/jenkins/ec2-creation/terraform2.tfstate"
+    path = "/var/lib/jenkins/ec2-creation-a/terraform.tfstate"
   }
 }
 
